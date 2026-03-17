@@ -102,6 +102,17 @@ npm run stop
 
 ---
 
+## Credits
+
+The humanization rules, pattern taxonomy, and core philosophy in this project are built on the work of **Siqi Chen ([@blader](https://github.com/blader))** and his original [humanizer](https://github.com/blader/humanizer) Claude Code skill (9.8k ★, MIT licensed).
+
+> *"LLMs use statistical algorithms to guess what should come next. The result tends toward the most statistically likely result that applies to the widest variety of cases."*
+> — Siqi Chen
+
+This project wraps those ideas into a Microsoft Word add-in with a live before/after scoring UI.
+
+---
+
 ## Troubleshooting
 
 | Problem | Fix |
