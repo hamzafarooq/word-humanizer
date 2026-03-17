@@ -1,13 +1,52 @@
 # Chapter Humanizer — Word Add-in
 
-A Microsoft Word task-pane add-in that rewrites AI-generated paragraphs to sound natural and human. Uses the Claude API (Anthropic) as the backend.
+A Microsoft Word task-pane add-in that rewrites AI-generated paragraphs to sound natural and human. It sits inside Word as a sidebar, lets you rewrite one paragraph at a time, scores the text before and after, and shows you exactly what patterns were removed — all without leaving your document.
+
+Uses the Claude API (Anthropic) as the rewrite engine.
+
+---
+
+## The problem it solves
+
+AI-generated text has fingerprints. Certain words appear far too often — *leverage*, *pivotal*, *seamless*, *robust*, *furthermore*. Sentences get stitched together with em dashes. Importance gets inflated with phrases like "represents a paradigm shift" or "serves as a testament to." Lists of three appear constantly. Simple verbs get replaced with roundabout constructions ("serves as" instead of "is").
+
+Individually these patterns are minor. Together they make text feel synthetic — readable, but somehow hollow. Editors, publishers, and increasingly AI detectors notice them.
+
+Chapter Humanizer removes them systematically, one paragraph at a time, while keeping your meaning, length, and technical accuracy intact.
+
+---
 
 ## What it does
 
-- **Humanize Paragraph at Cursor** — place your cursor anywhere in a paragraph, click the button, review the rewrite, and accept or dismiss.
-- **Humanize Selection** — select any text, get a rewrite, accept or dismiss.
+**Two rewrite modes:**
+- **Humanize Paragraph at Cursor** — place your cursor anywhere in a paragraph and click. No selection needed.
+- **Humanize Selection** — highlight any span of text and click to rewrite just that portion.
 
-All rewrites strip common AI writing patterns: em dashes, filler transitions, inflated significance language, rule-of-three structures, copula avoidance, and banned vocabulary.
+**Before/after scoring:**
+Every rewrite shows a live humanizer score (7–94) for both the original and the rewrite. The score is calculated client-side by checking for banned vocabulary, em dashes, and known AI phrase patterns. A score in the green zone (71+) means the text reads human. Red (below 40) means it's heavily patterned.
+
+**Flag explanations:**
+Below the score, you see exactly why the original scored low — which banned words were found, whether em dashes were present, which specific AI phrases were detected. After the rewrite, you see a green checklist of everything that was removed.
+
+**Accept or dismiss:**
+Every rewrite is a suggestion. You review it in the panel, then click **Accept** to replace the text in your document or **Dismiss** to leave it unchanged.
+
+**Sample text for testing:**
+A built-in "Insert sample AI text" button drops a heavily AI-patterned paragraph into your document so you can immediately see the scoring and rewrite flow in action.
+
+---
+
+## What patterns it removes
+
+| Category | Examples |
+|---|---|
+| Banned vocabulary | delve, leverage, robust, seamless, pivotal, tapestry, vibrant, foster, furthermore, moreover, groundbreaking, realm, navigate, landscape |
+| Punctuation | Em dashes (—) replaced with commas or periods |
+| Significance inflation | "represents a paradigm shift", "serves as a testament", "marks a pivotal moment" |
+| Copula avoidance | "serves as / stands as / boasts" → "is / are / has" |
+| Tacked-on phrases | "...underscoring its importance", "...highlighting the need for X" |
+| Negative parallelism | "It's not just X; it's Y" rewritten as a single direct statement |
+| Hedging and filler | "it is worth noting", "experts say", "in today's rapidly evolving world" |
 
 ---
 
