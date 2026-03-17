@@ -1,0 +1,18 @@
+{
+  "name": "word-humanizer",
+  "version": "1.0.0",
+  "description": "Word Add-in — humanize AI-written chapters paragraph by paragraph",
+  "scripts": {
+    "start": "node server.js",
+    "install-certs": "npx office-addin-dev-certs install",
+    "sideload": "npx office-addin-debugging start manifest.xml desktop",
+    "stop": "npx office-addin-debugging stop manifest.xml"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "office-addin-dev-certs": "^1.8.0"
+  },
+  "devDependencies": {
+    "office-addin-debugging": "^5.1.6"
+  }
+}

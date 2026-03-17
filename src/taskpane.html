@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Chapter Humanizer</title>
+  <link rel="icon" type="image/svg+xml" href="icon.svg"/>
+  <link rel="stylesheet" href="taskpane.css"/>
+  <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+</head>
+<body>
+  <div id="app">
+
+    <div class="header">
+      <div class="header-title">
+        <img src="icon.svg" width="26" height="26" alt=""/>
+        <h1>Chapter Humanizer</h1>
+      </div>
+      <p class="subtitle">Select text in Word, then click Humanize</p>
+    </div>
+
+    <div class="section">
+      <label>Anthropic API Key</label>
+      <div class="input-row">
+        <input type="password" id="api-key" placeholder="sk-ant-api03-..."/>
+        <button class="btn-secondary" id="save-key-btn">Save</button>
+      </div>
+      <p class="hint" id="key-status"></p>
+    </div>
+
+    <div class="btn-group">
+      <button class="btn-primary" id="humanize-para-btn">
+        <!-- wand + sparkle -->
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M15 4V2"/><path d="M15 16v-2"/><path d="M8 9h2"/><path d="M20 9h2"/>
+          <path d="M17.8 11.8 19 13"/><path d="M15 9h.01"/>
+          <path d="M17.8 6.2 19 5"/><path d="M3 21l9-9"/>
+          <path d="M12.2 6.2 11 5"/>
+        </svg>
+        Humanize Paragraph at Cursor
+      </button>
+      <button class="btn-outline" id="humanize-btn">
+        <!-- text selection + wand -->
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 7h6"/><path d="M4 11h4"/><path d="M4 15h3"/>
+          <path d="M15 4V2"/><path d="M15 16v-2"/><path d="M8 9h2"/><path d="M20 9h2"/>
+          <path d="M17.8 11.8 19 13"/><path d="M15 9h.01"/>
+          <path d="M17.8 6.2 19 5"/><path d="M3 21l9-9"/>
+        </svg>
+        Humanize Selection
+      </button>
+    </div>
+    <p class="hint" style="margin-bottom:8px">Place cursor in any paragraph and click the top button — no selection needed.</p>
+    <button class="btn-sample" id="insert-sample-btn">Insert sample AI text to test scoring</button>
+
+    <div id="card-area"></div>
+
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+  <script src="taskpane.js"></script>
+</body>
+</html>

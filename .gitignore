@@ -1,0 +1,8 @@
+node_modules/
+.DS_Store
+
+# Office dev certs (generated locally — run `npm run install-certs` to recreate)
+*.crt
+*.key
+*.pem
+certs/
