@@ -141,6 +141,18 @@ npm run stop
 
 ---
 
+## Roadmap
+
+- [ ] **Multi-LLM backend** — swap Claude for OpenAI, Gemini, or a local [Ollama](https://ollama.com) model via a dropdown in the panel. Useful for air-gapped environments or cost control.
+- [ ] **Ollama support** — run fully offline with models like Llama 3, Mistral, or Phi-3. No API key required.
+- [ ] **Chrome extension** — bring the same rewrite flow to Google Docs, Notion, and any `contenteditable` field in the browser.
+- [ ] **Tested environments** — currently verified on macOS + Word 16.x. Need community testing on Windows 10/11 + Word, and Word Online.
+- [ ] **Batch mode** — rewrite an entire document section-by-section in one click, with a progress bar and bulk accept/dismiss.
+- [ ] **Custom word list** — let users add their own banned words and phrases on top of the defaults.
+- [ ] **Score history** — track average before/after scores across a session so you can see overall document improvement.
+
+---
+
 ## Credits
 
 The humanization rules, pattern taxonomy, and core philosophy in this project are built on the work of **Siqi Chen ([@blader](https://github.com/blader))** and his original [humanizer](https://github.com/blader/humanizer) Claude Code skill (9.8k ★, MIT licensed).
