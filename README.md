@@ -6,6 +6,12 @@ Uses the Claude API (Anthropic) as the rewrite engine.
 
 ---
 
+## Demo
+
+<video src="video/humanzier-video.mp4" controls width="100%"></video>
+
+---
+
 ## The problem it solves
 
 AI-generated text has fingerprints. Certain words appear far too often — *leverage*, *pivotal*, *seamless*, *robust*, *furthermore*. Sentences get stitched together with em dashes. Importance gets inflated with phrases like "represents a paradigm shift" or "serves as a testament to." Lists of three appear constantly. Simple verbs get replaced with roundabout constructions ("serves as" instead of "is").
