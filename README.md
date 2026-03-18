@@ -8,7 +8,7 @@ Uses the Claude API (Anthropic) as the rewrite engine.
 
 ## Demo
 
-[▶ Watch the demo](video/humanzier-video.mp4)
+https://github.com/user-attachments/assets/a64fd976-5795-446d-a679-4a72cca0093c
 
 ---
 
